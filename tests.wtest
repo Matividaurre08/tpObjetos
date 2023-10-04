@@ -1,0 +1,15 @@
+describe "Pruebitas del estanciero" {
+    method initialize() {
+        const pepe = new Jugador(dinero = 10500, propiedades = #{unCampito})
+        const unCampito = new Campo(
+            rentaFija = 10500
+            estancias = 3
+            provinia = bsAs
+        )
+        const bsAs = new Provincia(campos = #{unCampito})
+    }
+    test "Obtenemos dueños de campos" {
+        assert.equals(pepe,bsAs.coleccionDeDuenios())
+
+    }
+}
